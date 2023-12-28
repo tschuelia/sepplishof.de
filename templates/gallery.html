@@ -1,0 +1,46 @@
+<!--    {% for img_pth, thum_pth, width, height in images %}-->
+<!--    <div class="card">-->
+<!--        <a data-pswp-height="{{ height }}"-->
+<!--           data-pswp-width="{{ width }}"-->
+<!--           href="{{ img_pth }}"-->
+<!--           target="_blank">-->
+<!--            <img alt="" src="{{ thum_pth }}"/>-->
+<!--        </a>-->
+<!--    </div>-->
+<!--    {% endfor %}-->
+
+<div class="pswp-gallery" id="gallery">
+
+    <div class="row row-cols-1 row-cols-md-5 g-4" data-masonry='{"percentPosition": true }'>
+        {% for img_pth, thum_pth, width, height in images %}
+        <div class="col">
+            <div class="card">
+                    <a data-pswp-height="{{ height }}"
+                       data-pswp-width="{{ width }}"
+                       href="{{ img_pth }}"
+                       target="_blank">
+                        <div>
+                            <img alt="" src="{{ thum_pth }}" class="card-img-top"/>
+                        </div>
+                    </a>
+            </div>
+        </div>
+
+        {% endfor %}
+    </div>
+
+</div>
+
+
+<script type="module">
+    import PhotoSwipeLightbox from "{{ url_for('static', filename='photoswipe/photoswipe-lightbox.esm.js') }}"
+    import PhotoSwipe from "{{ url_for('static', filename='photoswipe/photoswipe.esm.js') }}"
+
+    const lightbox = new PhotoSwipeLightbox({
+        gallery: '#gallery',
+        children: 'a',
+        pswpModule: PhotoSwipe
+    });
+    lightbox.init();
+
+</script>

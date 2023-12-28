@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="header">
+    <div class="title-container">
+        <img class="title-image" src="{{ url_for('static', filename='files/title.jpeg') }}">
+        <div class="title-scroll"><i class="fas fa-chevron-circle-down"></i></div>
+    </div>
+</div>
+<br>
+{% include 'intro.html' %}
+<br>
+{% include 'infos.html' %}
+<br>
+{% include 'gallery.html' %}
+<br>
+{% include 'location.html' %}
+<br>
+{% include 'contact.html' %}
+<br>
+{% endblock content %}

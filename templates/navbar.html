@@ -1,0 +1,25 @@
+<nav class="navbar navbar-light bg-light fixed-top navbar-expand-lg">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="{{ url_for('home') }}">Sepplishof</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav">
+            <a class="nav-link" href="{{ url_for('home', _anchor='infos') }}">Infos</a>
+            <a class="nav-link" href="{{ url_for('home', _anchor='gallery') }}">Bilder</a>
+            <a class="nav-link" href="{{ url_for('home', _anchor='location') }}">Anreise</a>
+            <a class="nav-link" href="{{ url_for('home', _anchor='contact') }}">Kontakt</a>
+        </div>
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('impressum') }}">Impressum</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url_for('agb') }}">AGB</a>
+            </li>
+        </ul>
+
+    </div>
+    </div>
+</nav>

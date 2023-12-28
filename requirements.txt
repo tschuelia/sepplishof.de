@@ -1,0 +1,4 @@
+flask<3
+pillow
+git+https://github.com/flask-extensions/Flask-GoogleMaps@0.4.1.1
+gunicorn

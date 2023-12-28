@@ -1,0 +1,112 @@
+:root {
+    --header-color: #2c2c2c;
+    --container-bg-color: Snow;
+    --container-border-color: purple;
+}
+
+/* Bad Script */
+@font-face {
+    font-family: 'Bad Script';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+    url('../fonts/BadScript-Regular.ttf') format('truetype'); /* Safari, Android, iOS */
+}
+
+/* amatic-sc-regular - latin */
+@font-face {
+    font-family: 'Amatic SC';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/amatic-sc-v16-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+    url('../fonts/amatic-sc-v16-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/amatic-sc-v16-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/amatic-sc-v16-latin-regular.woff') format('woff'), /* Modern Browsers */ url('../fonts/amatic-sc-v16-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/amatic-sc-v16-latin-regular.svg#AmaticSC') format('svg'); /* Legacy iOS */
+}
+
+/* open-sans-regular - latin */
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/open-sans-v23-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+    url('../fonts/open-sans-v23-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/open-sans-v23-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */ url('../fonts/open-sans-v23-latin-regular.woff') format('woff'), /* Modern Browsers */ url('../fonts/open-sans-v23-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */ url('../fonts/open-sans-v23-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+
+body {
+  padding-top: 60px;
+}
+
+
+.normal-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+}
+
+.intro-title {
+    font-family: "Bad Script";
+}
+
+.intro-text {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+.info-card-header {
+    color: var(--header-color);
+    text-decoration: none;
+    font-family: "Bad Script";
+    font-size: xx-large;
+}
+
+.footer {
+    background-color: lightgrey;
+    height: 100%;
+    text-align: center;
+    font-family: 'Amatic SC';
+    font-size: x-large;
+    padding-top: 10px;
+}
+
+
+.title-container {
+    position: relative;
+    text-align: center;
+}
+
+
+.title-scroll {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--header-color);
+    font-size: 3vw;
+}
+
+.title-image {
+    width: 100%;
+}
+
+.info-body-header {
+    font-family: 'Amatic SC', cursive, 'Heveltica Neue', Arial, sans-serif;
+}
+
+.card-link {
+    text-decoration: none;
+    color: darkgreen;
+}
+
+.card-link:hover {
+    text-decoration: none;
+    color: dimgrey;
+}
+
+.card-header .fa {
+    transition: .3s transform ease-in-out;
+}
+
+.card-header .collapsed .fa {
+    transform: rotate(90deg);
+}
+
