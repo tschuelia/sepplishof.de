@@ -1,11 +1,22 @@
-from flask import Flask, render_template, request
+import os
+import importlib.util
+
+from flask import Flask, render_template
 from flask_googlemaps import GoogleMaps
 from flask_googlemaps import Map
-import os
 import pathlib
 from PIL import Image
 
-from config import GMAPS_API_KEY
+# hack for the server
+if os.path.exists("/mnt/config.py"):
+    # import the GMAPS_API_KEY from the mounted config file
+    config_spec = importlib.util.spec_from_file_location("GMAPS_API_KEY", "/mnt/config.py")
+    config_module = importlib.util.module_from_spec(config_spec)
+    config_spec.loader.exec_module(config_module)
+    GMAPS_API_KEY = config_module.GMAPS_API_KEY
+else:
+    # import the GMAPS_API_KEY from the local config file
+    from config import GMAPS_API_KEY
 
 app = Flask(__name__)
 
