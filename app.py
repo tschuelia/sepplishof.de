@@ -5,10 +5,12 @@ import os
 import pathlib
 from PIL import Image
 
+from config import GMAPS_API_KEY
+
 app = Flask(__name__)
 
 # init GoogleMaps extension
-GoogleMaps(app, key=os.getenv("GMAPS_API_KEY"))
+GoogleMaps(app, key=GMAPS_API_KEY)
 LAT_SEPPLISHOF = 48.34385
 LNG_SEPPLISHOF = 8.352807
 
