@@ -92,12 +92,12 @@ body {
     font-family: 'Amatic SC', cursive, 'Heveltica Neue', Arial, sans-serif;
 }
 
-.card-link {
+.info-link {
     text-decoration: none;
     color: darkgreen;
 }
 
-.card-link:hover {
+.info-link:hover {
     text-decoration: none;
     color: dimgrey;
 }
