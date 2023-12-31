@@ -27,8 +27,8 @@ LNG_SEPPLISHOF = 8.352807
 
 
 def get_thumbnail(im):
-    new_height = 512
-    new_width = 512
+    new_height = 1024
+    new_width = 1820
 
     width, height = im.size
     left = (width - new_width) / 2
