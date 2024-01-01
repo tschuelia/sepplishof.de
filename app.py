@@ -72,7 +72,7 @@ def home():
         region="DE",
         identifier="location-map",
         cls="location-map",
-        style="width:70vw;height:50vh;margin:0 auto;"
+        style="width:100%;height:50vh;margin:0 auto;"
     )
     return render_template("index.html", location_map=location_map, images=IMAGES)
 
